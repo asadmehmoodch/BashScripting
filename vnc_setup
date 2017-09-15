@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p 'Enter username: ' USRNAME
+# Setting up VNC
+cp /home/$USRNAME/.vnc/xstartup /home/$USRNAME/.vnc/xstartup.bak
+#> /home/$USRNAME/.vnc/xstartup
+cp /home/appen1/.vnc/xstartup /home/$USRNAME/.vnc/
+chmod +x /home/$USRNAME/.vnc/xstartup 
+chown -R $USRNAME:$USRNAME /home/$USRNAME/.vnc/
